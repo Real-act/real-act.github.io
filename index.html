@@ -4,227 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Act Language | Rapide, Simple, Puissant</title>
-    <style>
-        /* --- CSS VARIABLE & RESET --- */
-        :root {
-            --bg-color: #0f172a;
-            --surface-color: #1e293b;
-            --accent-color: #8b5cf6;
-            --accent-hover: #a78bfa;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* --- NAVBAR --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 10%;
-            background-color: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #334155;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-color);
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 2rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 5rem 10%;
-            min-height: 70vh;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        /* --- FEATURES SECTION --- */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 5rem 10%;
-            background-color: #0b0f19;
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* --- INTERACTIVE PLAYGROUND --- */
-        .playground {
-            padding: 5rem 10%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .playground h2 {
-            margin-bottom: 2rem;
-        }
-
-        .editor-container {
-            width: 100%;
-            max-width: 800px;
-            background-color: #011627;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            border: 1px solid #334155;
-        }
-
-        .editor-header {
-            background-color: #0b1528;
-            padding: 0.75rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .dots {
-            display: flex;
-            gap: 6px;
-        }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ff5f56;
-        }
-        .dot:nth-child(2) { background-color: #ffbd2e; }
-        .dot:nth-child(3) { background-color: #27c93f; }
-
-        .editor-tabs button {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .editor-tabs button.active {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        .editor-body {
-            display: grid;
-            grid-template-columns: 1fr;
-            min-height: 200px;
-        }
-
-        textarea {
-            background: none;
-            border: none;
-            color: #ecc48d;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1rem;
-            padding: 1.5rem;
-            resize: none;
-            outline: none;
-            width: 100%;
-        }
-
-        .output {
-            background-color: #050b14;
-            color: #addb67;
-            padding: 1rem 1.5rem;
-            font-family: 'Courier New', Courier, monospace;
-            border-top: 1px solid #1e293b;
-            font-size: 0.9rem;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid #1e293b;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -232,100 +12,96 @@
     <nav>
         <div class="logo">act<span>.</span></div>
         <div class="nav-links">
-            <a href="#features">Fonctionnalités</a>
-            <a href="#playground">Exemples</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="#features">Caractéristiques</a>
+            <a href="#docs">Documentation</a>
+            <a href="#playground">Playground interactif</a>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Le langage pour passer à l'<span>action</span>.</h1>
-        <p>Act est un langage de programmation moderne, compilé, ultra-rapide et conçu pour la simplicité du Lua alliée à la puissance du C++.</p>
-        <button class="btn" onclick="scrollToPlayground()">Essayer Act</button>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <h1>Le langage taillé pour l'<span>action</span>.</h1>
+        <p>Act combine la clarté syntaxique de Lua avec les performances brutes de compilation du C++. Léger, moderne et embarquable.</p>
+        <div class="hero-buttons">
+            <a href="#playground" class="btn">Essayer dans le navigateur</a>
+            <a href="#docs" class="btn btn-secondary">Parcourir la Doc</a>
+        </div>
+    </header>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Vitesse Native</h3>
+            <p>Compilé via LLVM ou interprété via une VM ultra-légère. Idéal pour le scripting de jeux et les systèmes critiques.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">💎</div>
+            <h3>Syntaxe Épurée</h3>
+            <p>Zéro boilerplate. Pas de points-virgules obligatoires. Une lisibilité maximale pour un développement rapide.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Mémoire Hybride</h3>
+            <p>Gestion intelligente de la mémoire sans les pauses imprévisibles d'un Garbage Collector classique.</p>
+        </div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="features" id="features">
-        <div class="card">
-            <h3>🚀 Performance Brute</h3>
-            <p>Compilé nativement via LLVM pour des performances proches du C et du Rust.</p>
+    <!-- INTERACTIVE PLAYGROUND -->
+    <section id="playground" class="playground">
+        <div class="section-title">
+            <h2>Playground Act</h2>
+            <p>Modifie le code ci-dessous et clique sur "Exécuter". L'interpréteur JavaScript d'Act va l'exécuter en direct.</p>
         </div>
-        <div class="card">
-            <h3>✨ Syntaxe Légère</h3>
-            <p>Pas de points-virgules obligatoires, pas de boilerplate. Juste du code propre.</p>
-        </div>
-        <div class="card">
-            <h3>🔒 Mémoire Sûre</h3>
-            <p>Un système de gestion de mémoire hybride sans Garbage Collector intrusif.</p>
-        </div>
-    </section>
 
-    <!-- PLAYGROUND INTERACTIF -->
-    <section class="playground" id="playground">
-        <h2>Découvrez la syntaxe</h2>
         <div class="editor-container">
             <div class="editor-header">
-                <div class="dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
                 <div class="editor-tabs">
-                    <button class="active" onclick="changeCode('hello')">Hello World</button>
-                    <button onclick="changeCode('fib')">Fibonacci</button>
+                    <button class="tab-btn active" onclick="loadSnippet('hello')">Hello World</button>
+                    <button class="tab-btn" onclick="loadSnippet('variables')">Variables & Calculs</button>
+                    <button class="tab-btn" onclick="loadSnippet('condition')">Conditions (if/else)</button>
                 </div>
-                <button class="btn" style="padding: 0.4rem 1rem; font-size: 0.85rem;" onclick="runCode()">Exécuter</button>
+                <button class="btn btn-run" onclick="executeActCode()">▶ Exécuter</button>
             </div>
             <div class="editor-body">
-                <textarea id="code-editor" readonly></textarea>
-                <div class="output" id="console-output">Cliquez sur "Exécuter" pour voir le résultat.</div>
+                <div class="line-numbers" id="line-numbers">1</div>
+                <textarea id="code-editor" spellcheck="false" oninput="updateLineNumbers()"></textarea>
+            </div>
+            <div class="console-box">
+                <div class="console-header">Console de sortie</div>
+                <pre class="console-output" id="console-output">Cliquez sur Exécuter...</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINI DOCS SECTION -->
+    <section id="docs" class="docs-section">
+        <h2>Aperçu de la syntaxe Act</h2>
+        <div class="docs-grid">
+            <div class="doc-block">
+                <h4>Variables</h4>
+                <p>Déclaration avec <code>let</code> (mutable) ou <code>const</code> (immuable).</p>
+                <pre><code>let score = 100\nconst pi = 3.14</code></pre>
+            </div>
+            <div class="doc-block">
+                <h4>Fonctions</h4>
+                <p>Définies par le mot-clé <code>fn</code> avec typage optionnel.</p>
+                <pre><code>fn ajouter(a, b) {\n    return a + b\n}</code></pre>
+            </div>
+            <div class="doc-block">
+                <h4>Structures de contrôle</h4>
+                <p>Pas besoin de parenthèses pour les conditions.</p>
+                <pre><code>if score >= 50 {\n    print("Gagné")\n} else {\n    print("Perdu")\n}</code></pre>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Act Language. Propulsé par la communauté.</p>
+        <p>&copy; 2026 Act Language project. Conçu pour les développeurs exigeants.</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        // Banques de code pour la démo
-        const snippets = {
-            hello: `// Bienvenue dans le langage Act\nfn main() {\n    print("Hello, World!")\n}`,
-            fib: `// Calcul de Fibonacci en Act\nfn fib(n: int) -> int {\n    if n <= 1 { return n }\n    return fib(n - 1) + fib(n - 2)\n}\n\nfn main() {\n    let res = fib(6)\n    print("Fibonacci(6) = ", res)\n}`
-        };
-
-        const outputs = {
-            hello: `> Hello, World!`,
-            fib: `> Fibonacci(6) = 8`
-        };
-
-        let currentTab = 'hello';
-        const editor = document.getElementById('code-editor');
-        const consoleOutput = document.getElementById('console-output');
-
-        // Initialisation
-        editor.value = snippets.hello;
-
-        function changeCode(tab) {
-            currentTab = tab;
-            editor.value = snippets[tab];
-            consoleOutput.innerText = 'Cliquez sur "Exécuter" pour voir le résultat.';
-            
-            // Gestion visuelle des onglets
-            document.querySelectorAll('.editor-tabs button').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-        }
-
-        function runCode() {
-            consoleOutput.innerText = "Compilation...\n" + outputs[currentTab];
-        }
-
-        function scrollToPlayground() {
-            document.getElementById('playground').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+    <script src="interpreter.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
